@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Coaching</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>720Coaching</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body id="home-page">
+    <div id="container-fluid">
+      <!--navigation start -->
+      <%= render partial: "layouts/header" %>
+      <!--navigation end -->
 
-<%= yield %>
+      <!--main start -->
+      <div id="main-wrap">
+        <div class="container">
+          <div id="main" class="clearfix">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <!--main end -->
 
-</body>
+      <!--footer start -->
+      <%= render partial: "layouts/footer" %>
+      <!--footer end -->
+    </div>
+  </body>
 </html>
