@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/BebasNeue-webfont.eot');
+    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	font-family:Helvetica, sans-serif;
+	background:url(/assets/pattern.png) #666;
+	text-shadow:1px 1px 2px black;
+	color:#fff;
+}
+h1,
+h2,
+h3,
+h4
+{
+	font-weight:normal;
+	margin:0 0 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+.label-special{
+    font-family: 'BebasNeueRegular';
+	letter-spacing:2px;
+}
+.label-special{
+	font-size:1.3em;
+	line-height:30px;
+}
+a{
+	color:#00aaff;
+}
+a:hover{
+	color:#91cefd;
+}
+
+header{
+	background:url(/assets/nav.jpg) repeat-x center center;
+}
+.icon-services:before {
+    content: "";
+}
+.navbar-inverse .navbar-inner{
+  background-color: #444;
+  background-image: -moz-linear-gradient(top, #555, #333);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555), to(#333));
+  background-image: -webkit-linear-gradient(top, #555, #333);
+  background-image: -o-linear-gradient(top, #555, #333);
+  background-image: linear-gradient(to bottom, #555, #333);
+  background-repeat: repeat-x;
+  border-color: #252525;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666', endColorstr='#333', GradientType=0);
+}
+.form-section input,
+.form-section label{
+	display:inline-block;
+	margin:0;
+	line-height:30px;
+}
+.form-section input{
+	margin-bottom:4px;
+
+}
+textarea{
+	max-width:100%;
+}
+.seperator{
+	background:url(/assets/sep.png) repeat-x left center;
+	text-align:center;
+	color:#91cefd;
+}
+.seperator span{
+	display:inline-block;
+	background:url(/assets/pattern.png) #666;
+	font-size:1.3em;
+	padding:4px 10px;
+}
+.text-white{
+	color:#fff;
+}
+.last-item{
+	margin-bottom:0;
+}
+.coach-thumbs{
+	position:relative;
+}
+.thumbnail{
+	margin-bottom:10px;
+}
+.coach-thumbs .thumbnail{
+	text-align:center;
+	padding:13px 5px 5px;
+	margin-bottom:20px;
+
+}
+.coach-thumbs .caption{
+	text-align:left;
+	color:#fff;
+}
+.coach-thumbs h3{
+	border-bottom:1px solid;
+}
+.thumb img{
+	padding:3px;
+	border:1px solid;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+}
+.thumb{
+}
+.thumb-left .thumb{
+	margin:7px 0 10px 15px;
+}
+.thumb-left .caption{
+	float:left;
+}
+.rating-bar{
+	padding:0 5px;
+}
+.rating-bar a{
+	color:#f1ba04;
+	text-decoration:none;
+}
+.pagination ul > li > a:active,
+.pagination ul > li > a:focus,
+.pagination ul > li > a:hover,
+.pagination ul > li > a, .pagination ul > li > span,
+.pagination a{
+	text-shadow:none;
+	background:none;
+	color:#fff;
+}
+.pagination ul > li > a:active,
+.pagination ul > li > a:focus,
+.pagination ul > li > a:hover{
+	color:#00AAFF;
+}
+.mb-20,
+.select-wrap{
+	margin:0 0 20px;
+}
+.hero-unit{
+	background:none;
+}
+.comments-wrap .post{
+	padding-bottom:20px;
+}
+.post{
+	border-bottom:1px solid;
+	margin-bottom:25px;
+}
+.post-date{
+	color:#00faff;
+
+}
+
+
+
+.fr{
+	float:right;
+}
+.fl{
+	float:left;
+}
+hr{
+	border-width:1px 0 0;
+}
+.text-info{
+	color:#00AAFF;
+}
+.carousel-inner > .item > img{
+	width:100%;
+}
+#home-page #main h1{
+	text-align:center;
+	margin:0 0 40px;
+}
+#sub-navigation{
+	margin:0 0 25px;
+}
+	#sub-navigation .navbar-inner{
+		background:#2275b5;
+		border:none;
+		padding:0;
+	}
+	#sub-navigation a{
+		color:#fff;
+		text-transform:uppercase;
+		text-shadow:none;
+		font-weight:bold;
+	}
+	#sub-navigation li.active a,
+	#sub-navigation li a:hover{
+		background:#fe1a1a;
+	}
+	#sub-navigation li:first-child a{
+		-moz-border-radius:4px 0 0 4px;
+		-webkit-border-radius:4px 0 0 4px;
+		border-radius:4px 0 0 4px;
+	}
+	#sub-navigation li{
+		margin-right:15px;
+	}
+@media (max-width: 480px) {
+h1{
+	font-size:30px;
+}
+#sub-navigation .nav{
+	margin:10px 0 0;
+}
+#sub-navigation li{
+	float:none;
+	width:auto;
+	margin:0 10px 10px;
+}
+	#sub-navigation li a,
+	#sub-navigation li:first-child a{
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+	}
+}
