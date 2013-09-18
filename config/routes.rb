@@ -1,5 +1,10 @@
 Coaching::Application.routes.draw do
+  devise_for :users
+
   get "welcome/index"
+
+  devise_for :users#, :controllers => { :sessions => "admins/sessions" }
+  match '/auth/:provider/callback' => 'authentications#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

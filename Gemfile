@@ -5,8 +5,12 @@ ruby "1.9.3"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
-
+gem 'pg'
+gem 'sqlite3'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'oauth2'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,3 +44,4 @@ group :developer do
 #To disable assets log on server
   gem 'quiet_assets'
 end
+gem 'certified'
