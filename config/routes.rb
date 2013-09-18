@@ -1,6 +1,6 @@
 Coaching::Application.routes.draw do
-  get "welcome/index"
 
+  get "coach_and_athlete_video" => "welcome#coach_and_athlete_video"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
