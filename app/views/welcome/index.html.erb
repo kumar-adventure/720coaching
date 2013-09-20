@@ -1,3 +1,6 @@
+<% content_for :title, "720Coaching" %>
+<% content_for :body_id, "home-page" %>
+
 <% content_for :header do %>
   <div class="header-right pull-right">
     <p>Welcome Guest<%#= current_user ? current_user.name : "Guest" %><p>
@@ -10,7 +13,7 @@
     <ul class="nav">
       <li class="active"><%= link_to "View how our coaching site works", coach_and_athlete_video_path %></li>
       <li><%= link_to "Get Started", "javascript:void(0)" %></li>
-      <li><%= link_to "Sign in", "javascript:void(0)" %></li>
+      <li><%= link_to "Sign in", new_user_session_path %></li>
     </ul>
   </div>
 </div>

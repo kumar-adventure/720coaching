@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>720Coaching</title>
+    <title><%= yield :title %></title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-  <body id="home-page">
+  <body id="<%= yield :body_id %>">
     <div id="container-fluid">
       <!--navigation start -->
       <%= render partial: "layouts/header" %>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+      <%= render partial: "shared/flash_msg" %>
       <!--navigation end -->
 
       <!--main start -->
