@@ -17,14 +17,14 @@
           <div class="span4 text-center">
             <p>&nbsp;</p>
             <div class="row-fluid">
-              <div class="span6">
-                <p><input type="radio" name="coach">
-                  <label>Athlete</label></p>
-              </div>
-              <div class="span6">
-                <p><input type="radio" name="coach">
-                  <label>Coach</label></p>
-              </div>
+              <% User::USER_TYPE.each do |type| %>
+                <div class="span6">
+                  <p>
+                    <%= f.radio_button :type, type %>
+                    <%= f.label :type, type %>
+                  </p>
+                </div>
+              <% end %>
             </div>
           </div>
           <div class="span4"></div>
@@ -52,10 +52,10 @@
 
         <div class="row-fluid">
           <div class="span3 offset1">
-            <p><%#= f.label :user_name, "Choose a user name" %></p>
+            <p><%= f.label :user_name, "Choose a user name" %></p>
           </div>
           <div class="span4">
-            <p><%#= f.text_field :user_name, class: "input-block-level" %></p>
+            <p><%= f.text_field :user_name, class: "input-block-level" %></p>
           </div>
         </div>
 

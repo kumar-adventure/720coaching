@@ -10,6 +10,12 @@ Coaching::Application.routes.draw do
     end
   end
 
+  resource :coach, only: :nil do
+    member do
+      get 'home'
+    end
+  end
+
   match '/auth/:provider/callback' => 'authentications#create'
 
   get "coach_and_athlete_video" => "welcome#coach_and_athlete_video"
