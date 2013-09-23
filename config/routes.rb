@@ -1,6 +1,8 @@
 Coaching::Application.routes.draw do
 
 
+  resources :athlete
+
   get "welcome/index"
 
   devise_for :users#, :controllers => { :sessions => "admins/sessions" }
