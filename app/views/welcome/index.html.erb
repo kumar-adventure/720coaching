@@ -3,7 +3,7 @@
 
 <% content_for :header do %>
   <div class="header-right pull-right">
-    <p>Welcome Guest<%#= current_user ? current_user.name : "Guest" %><p>
+    <p>Welcome <%= current_user ? current_user.name : "Guest" rescue "" %><p>
     <% if current_user %>
       <%= link_to '<strong class="icon-pencil-2"></strong> Sign out'.html_safe, destroy_user_session_path, class: "btn btn-success pull-right" %>
     <% end %>
@@ -14,7 +14,7 @@
   <div class="navbar-inner">
     <ul class="nav">
       <li class="active"><%= link_to "View how our coaching site works", coach_and_athlete_video_path %></li>
-      <li><%= link_to "Get Started", "javascript:void(0)" %></li>
+      <li><%= link_to "Get Started", current_user ? home_athlete_path : new_user_registration_path %></li>
       <% unless current_user %>
         <li><%= link_to "Sign in", new_user_session_path %></li>
       <% end %>
