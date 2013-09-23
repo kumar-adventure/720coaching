@@ -1,6 +1,9 @@
 Coaching::Application.routes.draw do
 
   devise_for :users#, controllers: { registrations: 'registrations' }
+
+  resources :athlete
+
   match '/auth/:provider/callback' => 'authentications#create'
 
   get "coach_and_athlete_video" => "welcome#coach_and_athlete_video"
