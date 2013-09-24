@@ -1,7 +1,23 @@
 Coaching::Application.routes.draw do
 
 
-  resources :athlete
+  resources :coach do 
+    collection do
+      get :profile
+    end
+
+    member do
+    end
+  end
+  
+  resources :athlete do
+    collection do
+      get :profile
+    end
+
+    member do
+    end
+  end
 
   get "welcome/index"
 
