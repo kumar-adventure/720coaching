@@ -6,11 +6,20 @@ ruby "1.9.3"
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'sqlite3'
+gem 'mysql2'
+
+# To authtancate user
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'oauth2'
+
+# To assign and check user role
+gem 'cancan'
+gem 'rolify'
+
+# To validate human
+gem 'recaptcha', :require => 'recaptcha/rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,10 +47,11 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-group :developer do
+group :development do
 # To use debugger
   gem 'debugger'
 #To disable assets log on server
   gem 'quiet_assets'
 end
+
 gem 'certified'

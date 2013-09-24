@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -6,10 +7,17 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name,
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :user_name,
     :location, :address, :phone, :type, :paymaent
   # attr_accessible :title, :body
   has_many :authentications, :dependent => :destroy
+
+  validates_presence_of :type, :user_name
+  validates_uniqueness_of :user_name
+
+  after_create :assign_role_to_user
+
+  USER_TYPE = ["athlete", "coach"]
 
   def apply_omniauth(auth)
 	  # In previous omniauth, 'user_info' was used in place of 'raw_info'
@@ -18,4 +26,8 @@ class User < ActiveRecord::Base
 	  authentications.build(:provider => auth['provider'], :uid => auth['uid'], :token => auth['credentials']['token'])
 	end
 
+  def assign_role_to_user
+    self.add_role :athlete if self.type == 'athlete'
+    self.add_role :coach if self.type == 'coach'
+  end
 end

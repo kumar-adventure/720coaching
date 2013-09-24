@@ -1,27 +1,28 @@
 Coaching::Application.routes.draw do
 
+  devise_for :users#, controllers: { registrations: 'registrations' }
 
-  resources :coach do 
+  resource :athlete, only: :nil do
+    member do
+      get 'home'
+      get 'my_coaches'
+      get 'my_videos'
+    end
     collection do
       get :profile
-    end
+    end    
+  end
 
+  resource :coach, only: :nil do
     member do
+      get 'home'
     end
+    collection do
+      get :profile
+    end    
   end
   
-  resources :athlete do
-    collection do
-      get :profile
-    end
 
-    member do
-    end
-  end
-
-  get "welcome/index"
-
-  devise_for :users#, :controllers => { :sessions => "admins/sessions" }
   match '/auth/:provider/callback' => 'authentications#create'
 
   get "coach_and_athlete_video" => "welcome#coach_and_athlete_video"
