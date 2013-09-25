@@ -8,11 +8,11 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :user_name,
-    :location, :address, :phone, :type, :paymaent
+    :location, :address, :phone, :user_type, :paymaent
   # attr_accessible :title, :body
   has_many :authentications, :dependent => :destroy
 
-  validates_presence_of :type, :user_name
+  validates_presence_of :user_type, :user_name
   validates_uniqueness_of :user_name
 
   after_create :assign_role_to_user
@@ -27,7 +27,8 @@ class User < ActiveRecord::Base
 	end
 
   def assign_role_to_user
-    self.add_role :athlete if self.type == 'athlete'
-    self.add_role :coach if self.type == 'coach'
+    user = self
+    user.add_role :athlete if user.user_type == 'athlete'
+    user.add_role :coach if user.user_type == 'coach'
   end
 end

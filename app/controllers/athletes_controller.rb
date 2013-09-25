@@ -1,5 +1,6 @@
 class AthletesController < ApplicationController
   before_filter :authenticate_user!
+  authorize_resource :class => :controller
 
   def home
 
@@ -14,6 +15,10 @@ class AthletesController < ApplicationController
   end
 
   def my_videos
+
+  end
+
+  def view_coach
 
   end
 end

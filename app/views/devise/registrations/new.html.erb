@@ -20,8 +20,8 @@
               <% User::USER_TYPE.each do |type| %>
                 <div class="span6">
                   <p>
-                    <%= f.radio_button :type, type %>
-                    <%= f.label :type, type %>
+                    <%= f.radio_button :user_type, type %>
+                    <%= f.label :user_type, type %>
                   </p>
                 </div>
               <% end %>

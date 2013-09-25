@@ -11,7 +11,9 @@ class Ability
     #     can :read, :all
     #   end
     if user.has_role? :athlete
+      can :manage, Athlete
     elsif user.has_role? :coach
+      can :manage, Coach
     end
     #
     # The first argument to `can` is the action you are giving the user
