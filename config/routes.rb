@@ -7,6 +7,7 @@ Coaching::Application.routes.draw do
       get 'home'
       get 'my_coaches'
       get 'my_videos'
+      get 'coach/:id' => "athletes#view_coach", as: "view_coach"
     end
   end
 

@@ -14,7 +14,7 @@
   <div class="navbar-inner">
     <ul class="nav">
       <li class="active"><%= link_to "View how our coaching site works", coach_and_athlete_video_path %></li>
-      <li><%= link_to "Get Started", current_user ? home_athlete_path : new_user_registration_path %></li>
+      <li><%= link_to "Get Started", current_user ? ((current_user.has_role? :athlete) ? home_athlete_path : home_coach_path) : new_user_registration_path %></li>
       <% unless current_user %>
         <li><%= link_to "Sign in", new_user_session_path %></li>
       <% end %>
