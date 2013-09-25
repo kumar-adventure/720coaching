@@ -7,6 +7,9 @@ ruby "1.9.3"
 
 gem 'pg'
 gem 'mysql2'
+#gem 'sqlite3'
+
+gem "paperclip", "~> 3.0"
 
 # To authtancate user
 gem 'devise'

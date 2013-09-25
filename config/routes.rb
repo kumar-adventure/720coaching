@@ -4,6 +4,7 @@ Coaching::Application.routes.draw do
 
   resource :athlete, only: :nil do
     member do
+      get :index
       get 'home'
       get 'my_coaches'
       get 'my_videos'

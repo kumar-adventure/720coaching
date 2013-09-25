@@ -1,9 +1,12 @@
 class AthletesController < ApplicationController
   before_filter :authenticate_user!
-  authorize_resource :class => :controller
+  #authorize_resource :class => :controller
+
+  def index
+    redirect_to home_athlete_path
+  end
 
   def home
-
   end
 
   def profile

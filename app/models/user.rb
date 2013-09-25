@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
     :location, :address, :phone, :user_type, :paymaent
   # attr_accessible :title, :body
   has_many :authentications, :dependent => :destroy
+  has_many :videos, :dependent => :destroy
 
   validates_presence_of :user_type, :user_name
   validates_uniqueness_of :user_name
