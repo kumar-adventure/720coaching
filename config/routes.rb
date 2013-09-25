@@ -12,6 +12,7 @@ Coaching::Application.routes.draw do
     collection do
       get :profile
     end    
+    resources :videos
   end
 
   resource :coach, only: :nil do
