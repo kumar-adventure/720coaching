@@ -1,6 +1,6 @@
 class CoachesController < ApplicationController
   before_filter :authenticate_user!
-  authorize_resource :class => :controller
+  authorize_resource :class => false
 
   def home
   end
