@@ -5,7 +5,10 @@ class CoachesController < ApplicationController
   def home
   end
 
-  #def show
-    #@coach = User.where(id: params[:id]).first
- # end
+  def show
+    @coach = User.where(id: params[:id]).first
+  end
+
+  def profile
+  end
 end

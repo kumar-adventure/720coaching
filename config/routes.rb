@@ -9,13 +9,20 @@ Coaching::Application.routes.draw do
       get 'my_videos'
       get 'coach/:id' => "athletes#view_coach", as: "view_coach"
     end
+    collection do
+      get :profile
+    end    
   end
 
   resource :coach, only: :nil do
     member do
       get 'home'
     end
+    collection do
+      get :profile
+    end    
   end
+  
 
   match '/auth/:provider/callback' => 'authentications#create'
 

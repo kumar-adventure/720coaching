@@ -6,7 +6,11 @@ class AthletesController < ApplicationController
 
   end
 
+  def profile
+  end
+    
   def my_coaches
+
 
   end
 
